@@ -11,29 +11,25 @@ class Todo{
     private:
 
     string tasks[100];
-    int length = 0;
     int count = 0;
 
     public:
 
     Todo(){
-        length = 0;
-        count = 1;
+        count = 0;
     }
 
     void addTask(string action){
         tasks[count] = action;
         count++;
-        length++;
 
         // if(count == 9){
         //     cout << "List is at maximum capacity, do less today.";
         // }
         // else{
         //     cout << "What are the details of the task?" << endl;
+        //     cin >> tasks[count];
         //     getline(cin, tasks[count]);
-
-        //     //cin >> tasks[count];
         //     count++;
         // }
     }
@@ -49,13 +45,16 @@ class Todo{
                 newList[i] = tasks[newListNum];
                 newListNum++;
             }
-            
         }
+
+        copy(newList, newList + 100, tasks);
+
+        //tasks[100] = newList[99];
     }
 
     void printList(){
         int count2 = 1;
-        for(int i = 0; i < length; i++){
+        for(int i = 0; i < count; i++){
             cout << count2 << ": " << tasks[i] << endl;
             count2++;
         }

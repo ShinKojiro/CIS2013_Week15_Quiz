@@ -20,11 +20,16 @@ int main(){
 
         switch(choice){
             case 'a':
+                cout << "What are the details of the task?" << endl;
+                cin >> action;
+                // doesnt take string with spaces
+                //getline(cin, action);
                 myList.addTask(action);
                 break;
             case 'd':
-                myList.completeList(num);
+                cout << "Which task is complete?";
                 cin >> num;
+                myList.completeList(num);
                 break;
             case 'p':
                 myList.printList();
