@@ -7,6 +7,8 @@ using namespace std;
 int main(){
 
     char choice = 'a';
+    int num;
+    string action;
     Todo myList;
 
     cout << "C++ Todo List, Version 0.0.1 Alpha." << endl;
@@ -18,10 +20,11 @@ int main(){
 
         switch(choice){
             case 'a':
-                myList.addTask();
+                myList.addTask(action);
                 break;
             case 'd':
-                myList.completeList();
+                myList.completeList(num);
+                cin >> num;
                 break;
             case 'p':
                 myList.printList();
