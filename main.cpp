@@ -27,10 +27,10 @@ int main(){
                 myList.addTask(action);
                 break;
             case 'd':
-                cout << "Which task is complete?";
-                cin >> num;
-                myList.completeList(num);
-                break;
+                // cout << "Which task is complete?";
+                // cin >> num;
+                // myList.completeList(num);
+                // break;
             case 'p':
                 myList.printList();
                 break;
