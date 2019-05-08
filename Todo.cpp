@@ -7,9 +7,9 @@
 using namespace std;
 
 class Todo{
-    // testing a change
+    
     private:
-
+    // change
     string tasks[100];
     int count = 0;
 
