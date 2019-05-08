@@ -35,19 +35,25 @@ class Todo{
     }
 
     void completeList(int x){
+        // count--;
         string newList[99];
         int newListNum = 0;
         for (int i = 0; i < 99; i++){
-            if((i+1) == x){
+            if((i + 1) == x){
                 //do not copy
+                count--;
                 newListNum++;
-            }else{
+            } else {
+                newList[i - 1] = tasks[i];
                 newList[i] = tasks[newListNum];
+                for(int j = 0; j < newListNum; j++){
+                    tasks[j] = newList[j];
+                }
                 newListNum++;
             }
         }
 
-        copy(newList, newList + 100, tasks);
+        //copy(newList, newList + 100, tasks);
 
         //tasks[100] = newList[99];
     }
@@ -58,6 +64,7 @@ class Todo{
             cout << count2 << ": " << tasks[i] << endl;
             count2++;
         }
+        cout << endl;
     }
 
 };

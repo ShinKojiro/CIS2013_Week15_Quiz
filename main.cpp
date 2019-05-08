@@ -25,20 +25,23 @@ int main(){
                 // doesnt take string with spaces
                 //getline(cin, action);
                 myList.addTask(action);
+                cout << endl;
                 break;
             case 'd':
-                // cout << "Which task is complete?";
-                // cin >> num;
-                // myList.completeList(num);
-                // break;
+                cout << "Which task is complete?";
+                cin >> num;
+                myList.completeList(num);
+                cout << endl;
+                break;
             case 'p':
                 myList.printList();
+                cout << endl;
                 break;
             case 'x':
                 cout << "Than you for using Todo list 0.0.1 Alpha.";
                 break;
             default:
-                cout << "That is not a valid option.";
+                cout << "That is not a valid option." << endl;
         }
     }
 
