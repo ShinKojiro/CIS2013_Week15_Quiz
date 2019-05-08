@@ -60,11 +60,17 @@ class Todo{
 
     void printList(){
         int count2 = 1;
-        for(int i = 0; i < count; i++){
-            cout << count2 << ": " << tasks[i] << endl;
-            count2++;
+        if(count == 0){
+            cout << "You do not currently have any tasks added to the list." << endl;
+        } else {
+            cout << "Your current list of tasks is: " << endl;
+            for(int i = 0; i < count; i++){
+                cout << count2 << ": " << tasks[i] << endl;
+                count2++;
+            }
         }
-        cout << endl;
+        
+        //cout << endl;
     }
 
 };
