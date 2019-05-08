@@ -9,7 +9,7 @@ using namespace std;
 class Todo{
     
     private:
-    // change
+    
     string tasks[100];
     int count = 0;
 
