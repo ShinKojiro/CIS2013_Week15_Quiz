@@ -9,6 +9,7 @@ int main(){
     char choice = 'a';
     int num;
     string action;
+    //string firstWord;
     Todo myList;
 
     cout << "C++ Todo List, Version 0.0.1 Alpha." << endl;
@@ -22,8 +23,10 @@ int main(){
             case 'a':
                 cout << "What are the details of the task?" << endl;
                 cin >> action;
-                // doesnt take string with spaces
-                // getline(cin, action);
+                //firstWord = action;
+                //getline(cin, action);
+                
+                //myList.addTask(firstWord, action);
                 myList.addTask(action);
                 cout << endl;
                 break;

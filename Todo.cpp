@@ -19,7 +19,9 @@ class Todo{
         count = 0;
     }
 
+    //void addTask(string firstWord, string action){
     void addTask(string action){
+        //tasks[count] = firstWord + action;
         tasks[count] = action;
         count++;
 
